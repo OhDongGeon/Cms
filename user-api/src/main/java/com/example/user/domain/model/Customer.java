@@ -16,8 +16,8 @@ import java.util.Locale;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@AuditOverride(forClass = com.example.userapi.domain.model.BaseEntity.class) // 변경이력
-public class Customer extends com.example.userapi.domain.model.BaseEntity {
+@AuditOverride(forClass = BaseEntity.class) // 변경이력
+public class Customer extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -33,6 +33,7 @@ public class Customer extends com.example.userapi.domain.model.BaseEntity {
     private String verificationCode;
     private boolean verify = false;
 
+    private Integer balance;
 
     public static Customer from(SignUpForm form) {
         return Customer.builder()
