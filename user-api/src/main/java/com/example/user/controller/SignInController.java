@@ -22,4 +22,10 @@ public class SignInController {
     public ResponseEntity<String> signInCustomer(@RequestBody SignInForm signInForm) {
         return ResponseEntity.ok(signInApplication.customerLoginToken(signInForm));
     }
+
+
+    @PostMapping("/seller")
+    public ResponseEntity<String> signInSeller(@RequestBody SignInForm signInForm) {
+        return ResponseEntity.ok(signInApplication.sellerLoginToken(signInForm));
+    }
 }

@@ -1,5 +1,6 @@
 package com.example.user.domain.model;
 
+
 import com.example.user.domain.SignUpForm;
 import lombok.*;
 import org.hibernate.envers.AuditOverride;
@@ -9,15 +10,14 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Locale;
 
-
 @Entity
 @Getter
 @Setter
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@AuditOverride(forClass = BaseEntity.class) // 변경이력
-public class Customer extends BaseEntity {
+@AuditOverride(forClass = BaseEntity.class)
+public class Seller extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -33,12 +33,9 @@ public class Customer extends BaseEntity {
     private String verificationCode;
     private boolean verify = false;
 
-    @Column(columnDefinition = "int default 0")
-    private Integer balance;
 
-
-    public static Customer from(SignUpForm form) {
-        return Customer.builder()
+    public static Seller from(SignUpForm form) {
+        return Seller.builder()
                 .email(form.getEmail().toLowerCase(Locale.ROOT))
                 .name(form.getName())
                 .password(form.getPassword())
