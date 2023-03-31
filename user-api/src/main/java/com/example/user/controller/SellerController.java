@@ -3,7 +3,6 @@ package com.example.user.controller;
 
 import com.example.domain.config.JwtAuthenticationProvider;
 import com.example.domain.domain.common.UserVo;
-import com.example.user.domain.customer.CustomerDto;
 import com.example.user.domain.customer.SellerDto;
 import com.example.user.domain.model.Seller;
 import com.example.user.exception.CustomException;
