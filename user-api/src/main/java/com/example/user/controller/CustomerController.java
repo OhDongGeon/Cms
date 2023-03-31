@@ -9,7 +9,7 @@ import com.example.user.domain.model.Customer;
 import com.example.user.exception.CustomException;
 import com.example.user.exception.ErrorCode;
 import com.example.user.service.CustomerBalanceService;
-import com.example.user.service.CustomerService;
+import com.example.user.service.customer.CustomerService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
