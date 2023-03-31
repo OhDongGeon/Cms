@@ -38,4 +38,34 @@ X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpYVUvQzVDcngwMnVOM1RXT1VNSExNT3lOM
   "message": "잔액 충전",
   "money": 50000
 }
-#################################
+
+####################################################################################################################################
+
+### 회원가입 (셀러)
+POST http://localhost:8081/signup/seller
+Content-Type: application/json
+
+{
+  "birth": "1994-01-19",
+  "email": "tot0119@naver.com",
+  "name": "오동건",
+  "password": "12",
+  "phone": "0100000000"
+}
+### 이메일 인증 (셀러)
+GET http://localhost:8081/signup/seller/verify?email=tot0119@naver.com&code=SnEWYJr7Gl
+
+
+### 로그인 (셀러)
+POST http://localhost:8081/signin/seller
+Content-Type: application/json
+
+{
+  "email": "tot0119@naver.com",
+  "password": "12"
+}
+
+### 회원 정보 조회 (셀러)
+GET http://localhost:8081/seller/getInfo
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpYVUvQzVDcngwMnVOM1RXT1VNSExNT3lOMjM1TWFlSEx0dkdMYjc3QmNVPSIsImp0aSI6IjNFN2xQeUpIOTJENzZ3bjNhNVpGS0E9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjgwMjYwNTc2LCJleHAiOjE2ODAzNDY5NzZ9.RAasFOobcI4T6UhjifzLvQ6cyjeMMmL3arhY9mh7lWE
