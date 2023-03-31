@@ -31,11 +31,9 @@ public class Customer extends BaseEntity {
 
     private LocalDateTime verifyExpiredAt;
     private String verificationCode;
-    private boolean verify = false;
+    private boolean verify;
 
-    @Column(columnDefinition = "int default 0")
     private Integer balance;
-
 
     public static Customer from(SignUpForm form) {
         return Customer.builder()
