@@ -28,7 +28,7 @@ X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpYVUvQzVDcngwMnVOM1RXT1VNSExNT3lOM
   "price": 130000
 }
 
-###
+
 
 ### 상품 수정
 PUT http://localhost:8082/seller/product
@@ -60,3 +60,16 @@ X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpYVUvQzVDcngwMnVOM1RXT1VNSExNT3lOM
   "name": "매장2",
   "price": 50
 }
+
+
+
+### 상품 삭제
+DELETE http://localhost:8082/seller/product?id=1
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpYVUvQzVDcngwMnVOM1RXT1VNSExNT3lOMjM1TWFlSEx0dkdMYjc3QmNVPSIsImp0aSI6IjNFN2xQeUpIOTJENzZ3bjNhNVpGS0E9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjgwNDMzNjAyLCJleHAiOjE2ODA1MjAwMDJ9.6uC1TbnoZpGoTsAq9x09xXkLe6VLjbPANl1NM1BJ8t0
+
+
+### 상품 아이템 삭제
+DELETE http://localhost:8082/seller/product/item?id=2
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpYVUvQzVDcngwMnVOM1RXT1VNSExNT3lOMjM1TWFlSEx0dkdMYjc3QmNVPSIsImp0aSI6IjNFN2xQeUpIOTJENzZ3bjNhNVpGS0E9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjgwNDMzNjAyLCJleHAiOjE2ODA1MjAwMDJ9.6uC1TbnoZpGoTsAq9x09xXkLe6VLjbPANl1NM1BJ8t0
