@@ -1,0 +1,34 @@
+### 상품 추가
+POST http://localhost:8082/seller/product
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpYVUvQzVDcngwMnVOM1RXT1VNSExNT3lOMjM1TWFlSEx0dkdMYjc3QmNVPSIsImp0aSI6IjNFN2xQeUpIOTJENzZ3bjNhNVpGS0E9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjgwNDMzNjAyLCJleHAiOjE2ODA1MjAwMDJ9.6uC1TbnoZpGoTsAq9x09xXkLe6VLjbPANl1NM1BJ8t0
+
+
+{
+  "description": "상품 설명",
+  "items": [
+    {
+      "count": 5,
+      "name": "260",
+      "price": 125000
+    }
+  ],
+  "name": "나이키 신발"
+}
+
+
+### 상품 아이템 추가
+POST http://localhost:8082/seller/product/item
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpYVUvQzVDcngwMnVOM1RXT1VNSExNT3lOMjM1TWFlSEx0dkdMYjc3QmNVPSIsImp0aSI6IjNFN2xQeUpIOTJENzZ3bjNhNVpGS0E9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjgwNDMzNjAyLCJleHAiOjE2ODA1MjAwMDJ9.6uC1TbnoZpGoTsAq9x09xXkLe6VLjbPANl1NM1BJ8t0
+
+
+{
+  "productId": 1,
+  "count": 10,
+  "name": "270",
+  "price": 125000
+}
+### 이메일 인증 (고객)
+GET http://localhost:8081/signup/customer/verify?email=tot0119@naver.com&code=1XHyorj19B
+
