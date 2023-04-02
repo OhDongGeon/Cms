@@ -8,7 +8,6 @@ import com.example.order.domain.product.UpdateProductItemForm;
 import com.example.order.domain.repository.ProductItemRepository;
 import com.example.order.domain.repository.ProductRepository;
 import com.example.order.exception.CustomException;
-import com.example.order.exception.ErrorCode;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -38,7 +37,6 @@ public class ProductItemService {
     }
 
 
-
     @Transactional
     public ProductItem updateProductItem(Long sellerId, UpdateProductItemForm form) {
         ProductItem productItem = productItemRepository.findById(form.getId())
@@ -49,5 +47,14 @@ public class ProductItemService {
         productItem.setPrice(form.getPrice());
 
         return productItem;
+    }
+
+
+    @Transactional
+    public void deleteProductItem(Long sellerId, Long productItemId) {
+        ProductItem productItem = productItemRepository.findById(productItemId)
+                .filter(pi -> pi.getSellerId().equals(sellerId)).orElseThrow(() -> new CustomException(NOT_FOUND_ITEM));
+
+        productItemRepository.delete(productItem);
     }
 }
