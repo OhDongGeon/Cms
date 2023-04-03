@@ -3,14 +3,13 @@ POST http://localhost:8082/seller/product
 Content-Type: application/json
 X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpYVUvQzVDcngwMnVOM1RXT1VNSExNT3lOMjM1TWFlSEx0dkdMYjc3QmNVPSIsImp0aSI6IjNFN2xQeUpIOTJENzZ3bjNhNVpGS0E9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjgwNDMzNjAyLCJleHAiOjE2ODA1MjAwMDJ9.6uC1TbnoZpGoTsAq9x09xXkLe6VLjbPANl1NM1BJ8t0
 
-
 {
   "description": "상품 설명",
   "items": [
     {
       "count": 1,
       "name": "매장",
-      "price": 500000000
+      "price": 100000
     }
   ],
   "name": "나이키 매장"
@@ -101,27 +100,9 @@ X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpYVUvQzVDcngwMnVOM1RXT1VNSExNT3lOM
       "count": 1,
       "id": 1,
       "name": "매장",
-      "price": 500000000
+      "price": 100000
     }
   ],
   "name": "나이키 매장",
   "sellerId": 1
-}
-
-### 상품 추가
-POST http://localhost:8082/seller/product
-Content-Type: application/json
-X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpYVUvQzVDcngwMnVOM1RXT1VNSExNT3lOMjM1TWFlSEx0dkdMYjc3QmNVPSIsImp0aSI6IjNFN2xQeUpIOTJENzZ3bjNhNVpGS0E9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjgwNDMzNjAyLCJleHAiOjE2ODA1MjAwMDJ9.6uC1TbnoZpGoTsAq9x09xXkLe6VLjbPANl1NM1BJ8t0
-
-
-{
-  "description": "상품 설명",
-  "items": [
-    {
-      "count": 1,
-      "name": "매장",
-      "price": 500000000
-    }
-  ],
-  "name": "나이키 매장"
 }
