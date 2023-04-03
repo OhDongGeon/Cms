@@ -22,6 +22,10 @@ public class Cart {
     private List<Product> products = new ArrayList<>();
     private List<String> messages = new ArrayList<>();
 
+    public Cart(Long customerId) {
+        this.customerId = customerId;
+    }
+
     public void addMessage(String message) {
         messages.add(message);
     }
@@ -38,7 +42,7 @@ public class Cart {
         private String description;
         private List<ProductItem> items = new ArrayList<>();
 
-        public static Product from (AddProductCartForm form) {
+        public static Product from(AddProductCartForm form) {
             return Product.builder()
                     .id(form.getId())
                     .sellerId(form.getSellerId())
@@ -59,7 +63,7 @@ public class Cart {
         private Integer count;
         private Integer price;
 
-        public static ProductItem from (AddProductCartForm.ProductItem form) {
+        public static ProductItem from(AddProductCartForm.ProductItem form) {
             return ProductItem.builder()
                     .id(form.getId())
                     .name(form.getName())
