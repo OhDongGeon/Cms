@@ -33,7 +33,7 @@ public class CartApplication {
 
         Cart cart = cartService.getCart(customerId);
 
-        if (cart != null && addAble(cart, product, form)) {
+        if (cart != null && !addAble(cart, product, form)) {
             throw new CustomException(ITEM_COUNT_NOT_ENOUGH);
         }
 
@@ -55,7 +55,7 @@ public class CartApplication {
                 formItem -> {
                     Integer cartCount = cartItemCountMap.get(formItem.getId());
                     Integer currentCount = currentItemCountMap.get(formItem.getId());
-
+                    
                     return formItem.getCount() + cartCount > currentCount;
                 });
     }
