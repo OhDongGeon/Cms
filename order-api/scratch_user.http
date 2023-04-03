@@ -9,11 +9,11 @@ X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpYVUvQzVDcngwMnVOM1RXT1VNSExNT3lOM
   "items": [
     {
       "count": 1,
-      "name": "270",
-      "price": 125000
+      "name": "매장",
+      "price": 500000000
     }
   ],
-  "name": "나이키 에어포스 수입"
+  "name": "나이키 매장"
 }
 
 ### 상품 아이템 추가
@@ -86,3 +86,42 @@ GET http://localhost:8082/search/product/detail?productId=2
 Content-Type: application/json
 X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpYVUvQzVDcngwMnVOM1RXT1VNSExNT3lOMjM1TWFlSEx0dkdMYjc3QmNVPSIsImp0aSI6IjNFN2xQeUpIOTJENzZ3bjNhNVpGS0E9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjgwNDMzNjAyLCJleHAiOjE2ODA1MjAwMDJ9.6uC1TbnoZpGoTsAq9x09xXkLe6VLjbPANl1NM1BJ8t0
 
+
+
+### 카트 추가
+POST http://localhost:8082/customer/cart
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpYVUvQzVDcngwMnVOM1RXT1VNSExNT3lOMjM1TWFlSEx0dkdMYjc3QmNVPSIsImp0aSI6IjNFN2xQeUpIOTJENzZ3bjNhNVpGS0E9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE2ODA1MDk1MDIsImV4cCI6MTY4MDU5NTkwMn0.flXJly3gXhvrQdP2ukWGpv8dNMff12Fs9whyaNq3Pwc
+
+{
+  "description": "상품 설명",
+  "id": 1,
+  "items": [
+    {
+      "count": 1,
+      "id": 1,
+      "name": "매장",
+      "price": 500000000
+    }
+  ],
+  "name": "나이키 매장",
+  "sellerId": 1
+}
+
+### 상품 추가
+POST http://localhost:8082/seller/product
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpYVUvQzVDcngwMnVOM1RXT1VNSExNT3lOMjM1TWFlSEx0dkdMYjc3QmNVPSIsImp0aSI6IjNFN2xQeUpIOTJENzZ3bjNhNVpGS0E9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjgwNDMzNjAyLCJleHAiOjE2ODA1MjAwMDJ9.6uC1TbnoZpGoTsAq9x09xXkLe6VLjbPANl1NM1BJ8t0
+
+
+{
+  "description": "상품 설명",
+  "items": [
+    {
+      "count": 1,
+      "name": "매장",
+      "price": 500000000
+    }
+  ],
+  "name": "나이키 매장"
+}
