@@ -13,7 +13,7 @@ X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpYVUvQzVDcngwMnVOM1RXT1VNSExNT3lOM
       "price": 125000
     }
   ],
-  "name": "나이키 에어포스"
+  "name": "나이키 에어포스 수입"
 }
 
 ### 상품 아이템 추가
@@ -73,3 +73,16 @@ X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpYVUvQzVDcngwMnVOM1RXT1VNSExNT3lOM
 DELETE http://localhost:8082/seller/product/item?id=2
 Content-Type: application/json
 X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpYVUvQzVDcngwMnVOM1RXT1VNSExNT3lOMjM1TWFlSEx0dkdMYjc3QmNVPSIsImp0aSI6IjNFN2xQeUpIOTJENzZ3bjNhNVpGS0E9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjgwNDMzNjAyLCJleHAiOjE2ODA1MjAwMDJ9.6uC1TbnoZpGoTsAq9x09xXkLe6VLjbPANl1NM1BJ8t0
+
+
+
+### 상품 검색
+GET http://localhost:8082/search/product?name=나이키
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpYVUvQzVDcngwMnVOM1RXT1VNSExNT3lOMjM1TWFlSEx0dkdMYjc3QmNVPSIsImp0aSI6IjNFN2xQeUpIOTJENzZ3bjNhNVpGS0E9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjgwNDMzNjAyLCJleHAiOjE2ODA1MjAwMDJ9.6uC1TbnoZpGoTsAq9x09xXkLe6VLjbPANl1NM1BJ8t0
+
+### 상품 디테일 검색
+GET http://localhost:8082/search/product/detail?productId=2
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJpYVUvQzVDcngwMnVOM1RXT1VNSExNT3lOMjM1TWFlSEx0dkdMYjc3QmNVPSIsImp0aSI6IjNFN2xQeUpIOTJENzZ3bjNhNVpGS0E9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNjgwNDMzNjAyLCJleHAiOjE2ODA1MjAwMDJ9.6uC1TbnoZpGoTsAq9x09xXkLe6VLjbPANl1NM1BJ8t0
+
