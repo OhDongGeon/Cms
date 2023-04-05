@@ -44,6 +44,13 @@ public class CartApplication {
     }
 
 
+    public Cart updateCart(Long customerId, Cart cart) {
+        // 실질적으로 변하는 데이터는 삭제, 수량 변경 정도
+        cartService.putCart(customerId, cart);
+        return getCart(customerId);
+    }
+
+
     //  장바구니에 상품을 추가 후 상품의 가격이나 수량이 변동 되었을 때.
     public Cart getCart(Long customerId) {
         Cart cart = refreshCart(cartService.getCart(customerId));
